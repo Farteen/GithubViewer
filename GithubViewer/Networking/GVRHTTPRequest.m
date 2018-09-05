@@ -68,6 +68,7 @@
     if (self.didFinished) {
         GVRHTTPResponse *response = [[[self bindingRepsonseClass] alloc] init];
         [response parseHTTPResponseDictionary:responseObject];
+        self.response = response;
         self.didFinished(task, response);
     }
 }

@@ -20,6 +20,7 @@
 		DB22CC8A21402F5400BE551A /* NSObject+GVRParseJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC8921402F5400BE551A /* NSObject+GVRParseJSON.m */; };
 		DB22CC8D21402FFA00BE551A /* GithubAPISearchingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC8C21402FFA00BE551A /* GithubAPISearchingSpec.m */; };
 		DB22CC90214030CB00BE551A /* KiwiAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC8F214030CB00BE551A /* KiwiAsync.m */; };
+		DB22CC93214031F900BE551A /* HTTPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC92214031F900BE551A /* HTTPSession.m */; };
 		DBF8033C213ED1AD004A75D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF8033B213ED1AD004A75D2 /* AppDelegate.m */; };
 		DBF8033F213ED1AD004A75D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF8033E213ED1AD004A75D2 /* ViewController.m */; };
 		DBF80342213ED1AD004A75D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF80340213ED1AD004A75D2 /* Main.storyboard */; };
@@ -76,6 +77,8 @@
 		DB22CC8C21402FFA00BE551A /* GithubAPISearchingSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubAPISearchingSpec.m; sourceTree = "<group>"; };
 		DB22CC8E214030CB00BE551A /* KiwiAsync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KiwiAsync.h; sourceTree = "<group>"; };
 		DB22CC8F214030CB00BE551A /* KiwiAsync.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiwiAsync.m; sourceTree = "<group>"; };
+		DB22CC91214031F900BE551A /* HTTPSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPSession.h; sourceTree = "<group>"; };
+		DB22CC92214031F900BE551A /* HTTPSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPSession.m; sourceTree = "<group>"; };
 		DBF80337213ED1AD004A75D2 /* GithubViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF8033A213ED1AD004A75D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBF8033B213ED1AD004A75D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 				DB22CC71213ED95200BE551A /* GithubViewerTestsPCH.pch */,
 				DB22CC8E214030CB00BE551A /* KiwiAsync.h */,
 				DB22CC8F214030CB00BE551A /* KiwiAsync.m */,
+				DB22CC91214031F900BE551A /* HTTPSession.h */,
+				DB22CC92214031F900BE551A /* HTTPSession.m */,
 			);
 			path = TestingUtil;
 			sourceTree = "<group>";
@@ -464,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB22CC93214031F900BE551A /* HTTPSession.m in Sources */,
 				DB22CC6B213ED79300BE551A /* GithubAPIStarringSpec.m in Sources */,
 				DB22CC8D21402FFA00BE551A /* GithubAPISearchingSpec.m in Sources */,
 				DB22CC90214030CB00BE551A /* KiwiAsync.m in Sources */,

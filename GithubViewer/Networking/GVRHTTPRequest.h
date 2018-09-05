@@ -14,7 +14,7 @@ typedef NS_ENUM(NSInteger, GVRRequestMethod) {
     GVRRequestMethodPOST
 };
 @interface GVRHTTPRequest : NSObject
-
+@property (nonatomic, strong)   __kindof GVRHTTPResponse *response;
 @property (nonatomic, copy)     void(^didFinished)(NSURLSessionTask *task, __kindof GVRHTTPResponse  *response);
 @property (nonatomic, copy)     void(^didFailed)(NSURLSessionTask *task, NSError *error);
 

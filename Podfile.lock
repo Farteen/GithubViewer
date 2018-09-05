@@ -21,9 +21,6 @@ PODS:
     - EasyFoundation (~> 1.0.0)
   - EasySequence (1.3.0)
   - EasyTuple (1.1.2)
-  - KIF (3.7.4):
-    - KIF/Core (= 3.7.4)
-  - KIF/Core (3.7.4)
   - Kiwi (3.0.0)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
@@ -32,7 +29,6 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - EasyReact
-  - KIF
   - Kiwi
   - SDWebImage
 
@@ -43,7 +39,6 @@ SPEC REPOS:
     - EasyReact
     - EasySequence
     - EasyTuple
-    - KIF
     - Kiwi
     - SDWebImage
 
@@ -53,10 +48,9 @@ SPEC CHECKSUMS:
   EasyReact: c80e20041c83f51307405277b93df386a1ed8728
   EasySequence: 1db9bb7b915052d3589d79c30ece1f0e160af550
   EasyTuple: a6a068ab3aa47e899a0c9f9ee23ddb394542ea9e
-  KIF: f3d01c109ee9d1cfe6b0f2bb2aa278e807e971e2
   Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 204d10dbec74097f7942db9b431c902fa3200b91
+PODFILE CHECKSUM: 54b414e741cbe02d32610e5a18a892d81e6fcea9
 
 COCOAPODS: 1.5.3

@@ -29,7 +29,11 @@ describe(@"GithubAPISearching", ^{
         [searchReq setDidFinished:^(NSURLSessionTask *task, __kindof GVRGithubSearchRepositoriesResponse *response) {
             
         }];
-        
+        [searchReq setDidFailed:^(NSURLSessionTask *task, NSError *error) {
+            
+        }];
+        [searchReq startRequest];
+        [KiwiAsync(searchReq.response) beNonNil];
     });
     
     afterEach(^{

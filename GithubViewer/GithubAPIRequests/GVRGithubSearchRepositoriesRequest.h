@@ -10,5 +10,8 @@
 
 @interface GVRGithubSearchRepositoriesRequest : GVRHTTPRequest
 
+@property (nonatomic, copy)     NSString    *q;
+@property (nonatomic, copy)     NSString    *sort;
+@property (nonatomic, copy)     NSString    *order;
 
 @end

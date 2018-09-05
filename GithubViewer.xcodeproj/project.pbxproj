@@ -11,6 +11,8 @@
 		CFAA461C6DDF759186D7F961 /* libPods-GithubViewerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34546AD13205BB5A3539DAE5 /* libPods-GithubViewerTests.a */; };
 		DB22CC6B213ED79300BE551A /* GithubAPIStarringSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC6A213ED79300BE551A /* GithubAPIStarringSpec.m */; };
 		DB22CC6F213ED7DC00BE551A /* GVRHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC6E213ED7DC00BE551A /* GVRHTTPSessionManager.m */; };
+		DB22CC772140160800BE551A /* GVRHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC762140160800BE551A /* GVRHTTPRequest.m */; };
+		DB22CC7A21401A4E00BE551A /* GVRHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC7921401A4E00BE551A /* GVRHTTPResponse.m */; };
 		DBF8033C213ED1AD004A75D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF8033B213ED1AD004A75D2 /* AppDelegate.m */; };
 		DBF8033F213ED1AD004A75D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF8033E213ED1AD004A75D2 /* ViewController.m */; };
 		DBF80342213ED1AD004A75D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF80340213ED1AD004A75D2 /* Main.storyboard */; };
@@ -49,6 +51,10 @@
 		DB22CC6D213ED7DC00BE551A /* GVRHTTPSessionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVRHTTPSessionManager.h; sourceTree = "<group>"; };
 		DB22CC6E213ED7DC00BE551A /* GVRHTTPSessionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVRHTTPSessionManager.m; sourceTree = "<group>"; };
 		DB22CC71213ED95200BE551A /* GithubViewerTestsPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GithubViewerTestsPCH.pch; sourceTree = "<group>"; };
+		DB22CC752140160800BE551A /* GVRHTTPRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVRHTTPRequest.h; sourceTree = "<group>"; };
+		DB22CC762140160800BE551A /* GVRHTTPRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVRHTTPRequest.m; sourceTree = "<group>"; };
+		DB22CC7821401A4E00BE551A /* GVRHTTPResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVRHTTPResponse.h; sourceTree = "<group>"; };
+		DB22CC7921401A4E00BE551A /* GVRHTTPResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVRHTTPResponse.m; sourceTree = "<group>"; };
 		DBF80337213ED1AD004A75D2 /* GithubViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF8033A213ED1AD004A75D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBF8033B213ED1AD004A75D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -123,6 +129,10 @@
 			children = (
 				DB22CC6D213ED7DC00BE551A /* GVRHTTPSessionManager.h */,
 				DB22CC6E213ED7DC00BE551A /* GVRHTTPSessionManager.m */,
+				DB22CC752140160800BE551A /* GVRHTTPRequest.h */,
+				DB22CC762140160800BE551A /* GVRHTTPRequest.m */,
+				DB22CC7821401A4E00BE551A /* GVRHTTPResponse.h */,
+				DB22CC7921401A4E00BE551A /* GVRHTTPResponse.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -393,8 +403,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB22CC7A21401A4E00BE551A /* GVRHTTPResponse.m in Sources */,
 				DB22CC6F213ED7DC00BE551A /* GVRHTTPSessionManager.m in Sources */,
 				DBF8033F213ED1AD004A75D2 /* ViewController.m in Sources */,
+				DB22CC772140160800BE551A /* GVRHTTPRequest.m in Sources */,
 				DBF8034A213ED1AF004A75D2 /* main.m in Sources */,
 				DBF8033C213ED1AD004A75D2 /* AppDelegate.m in Sources */,
 			);
@@ -575,7 +587,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.farteen.GithubViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -593,7 +605,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.farteen.GithubViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

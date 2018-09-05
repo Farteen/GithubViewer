@@ -1,16 +1,16 @@
 //
-//  GithubViewerTestsPCH.pch
+//  PrefixHeader.pch
 //  GithubViewer
 //
-//  Created by Glassesd on 2018/9/4.
+//  Created by Glassesd on 2018/9/5.
 //  Copyright © 2018 Glassesd. All rights reserved.
 //
 
-#ifndef GithubViewerTestsPCH_pch
-#define GithubViewerTestsPCH_pch
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
 
-
+#import "NSObject+GVRParseJSON.h"
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-#endif /* GithubViewerTestsPCH_pch */
+#endif /* PrefixHeader_pch */

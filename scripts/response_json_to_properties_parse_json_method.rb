@@ -23,8 +23,7 @@ Const_dictLeft  = "dict[@\""
 Const_dictRight = "\"]"
 Const_squareBracketLeft = "["
 Const_squareBracketRight = "]"
-Const_booleanValue = "booleanValue"
-
+Const_booleanValue = " boolValue"
 
 def parse(hash, propertiesDeclaration, parseJSONMethods)
     hash.each do |key, value|
@@ -33,6 +32,7 @@ def parse(hash, propertiesDeclaration, parseJSONMethods)
             # parse(value)
             propertiesDeclaration << Const_property + Const_strong + Const_dictionary + key + Const_comma
             parseJSONMethods << Const_tab + Const_selfDot + key + Const_equal + Const_dictLeft + key + Const_dictRight + Const_comma
+            
         elsif value.is_a?(Array)
             propertiesDeclaration << Const_property + Const_strong + Const_array + key + Const_comma
             parseJSONMethods << Const_tab + Const_selfDot + key + Const_equal + Const_dictLeft + key + Const_dictRight + Const_comma

@@ -14,7 +14,7 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        self.params = [NSMutableDictionary dictionaryWithCapacity:10];
+        
     }
     return self;
 }

@@ -15,6 +15,11 @@
 		DB22CC7A21401A4E00BE551A /* GVRHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC7921401A4E00BE551A /* GVRHTTPResponse.m */; };
 		DB22CC7D21401CDB00BE551A /* GVRGithubSearchRepositoriesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC7C21401CDB00BE551A /* GVRGithubSearchRepositoriesRequest.m */; };
 		DB22CC8121401DAC00BE551A /* GVRGithubSearchRepositoriesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC8021401DAC00BE551A /* GVRGithubSearchRepositoriesResponse.m */; };
+		DB22CC8421402E0300BE551A /* GVRGithubSearchRepositoriesResponseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC8321402E0300BE551A /* GVRGithubSearchRepositoriesResponseItem.m */; };
+		DB22CC8721402EB700BE551A /* GVRGithubSearchRepositoriesResponseItemOwner.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC8621402EB700BE551A /* GVRGithubSearchRepositoriesResponseItemOwner.m */; };
+		DB22CC8A21402F5400BE551A /* NSObject+GVRParseJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC8921402F5400BE551A /* NSObject+GVRParseJSON.m */; };
+		DB22CC8D21402FFA00BE551A /* GithubAPISearchingSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC8C21402FFA00BE551A /* GithubAPISearchingSpec.m */; };
+		DB22CC90214030CB00BE551A /* KiwiAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC8F214030CB00BE551A /* KiwiAsync.m */; };
 		DBF8033C213ED1AD004A75D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF8033B213ED1AD004A75D2 /* AppDelegate.m */; };
 		DBF8033F213ED1AD004A75D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF8033E213ED1AD004A75D2 /* ViewController.m */; };
 		DBF80342213ED1AD004A75D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF80340213ED1AD004A75D2 /* Main.storyboard */; };
@@ -61,6 +66,16 @@
 		DB22CC7C21401CDB00BE551A /* GVRGithubSearchRepositoriesRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVRGithubSearchRepositoriesRequest.m; sourceTree = "<group>"; };
 		DB22CC7F21401DAC00BE551A /* GVRGithubSearchRepositoriesResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVRGithubSearchRepositoriesResponse.h; sourceTree = "<group>"; };
 		DB22CC8021401DAC00BE551A /* GVRGithubSearchRepositoriesResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVRGithubSearchRepositoriesResponse.m; sourceTree = "<group>"; };
+		DB22CC8221402E0300BE551A /* GVRGithubSearchRepositoriesResponseItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVRGithubSearchRepositoriesResponseItem.h; sourceTree = "<group>"; };
+		DB22CC8321402E0300BE551A /* GVRGithubSearchRepositoriesResponseItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVRGithubSearchRepositoriesResponseItem.m; sourceTree = "<group>"; };
+		DB22CC8521402EB700BE551A /* GVRGithubSearchRepositoriesResponseItemOwner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVRGithubSearchRepositoriesResponseItemOwner.h; sourceTree = "<group>"; };
+		DB22CC8621402EB700BE551A /* GVRGithubSearchRepositoriesResponseItemOwner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVRGithubSearchRepositoriesResponseItemOwner.m; sourceTree = "<group>"; };
+		DB22CC8821402F5400BE551A /* NSObject+GVRParseJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+GVRParseJSON.h"; sourceTree = "<group>"; };
+		DB22CC8921402F5400BE551A /* NSObject+GVRParseJSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GVRParseJSON.m"; sourceTree = "<group>"; };
+		DB22CC8B21402F5C00BE551A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		DB22CC8C21402FFA00BE551A /* GithubAPISearchingSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GithubAPISearchingSpec.m; sourceTree = "<group>"; };
+		DB22CC8E214030CB00BE551A /* KiwiAsync.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KiwiAsync.h; sourceTree = "<group>"; };
+		DB22CC8F214030CB00BE551A /* KiwiAsync.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KiwiAsync.m; sourceTree = "<group>"; };
 		DBF80337213ED1AD004A75D2 /* GithubViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF8033A213ED1AD004A75D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBF8033B213ED1AD004A75D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -126,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				DB22CC6A213ED79300BE551A /* GithubAPIStarringSpec.m */,
+				DB22CC8C21402FFA00BE551A /* GithubAPISearchingSpec.m */,
 			);
 			path = GithubAPI;
 			sourceTree = "<group>";
@@ -147,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				DB22CC71213ED95200BE551A /* GithubViewerTestsPCH.pch */,
+				DB22CC8E214030CB00BE551A /* KiwiAsync.h */,
+				DB22CC8F214030CB00BE551A /* KiwiAsync.m */,
 			);
 			path = TestingUtil;
 			sourceTree = "<group>";
@@ -158,6 +176,10 @@
 				DB22CC7C21401CDB00BE551A /* GVRGithubSearchRepositoriesRequest.m */,
 				DB22CC7F21401DAC00BE551A /* GVRGithubSearchRepositoriesResponse.h */,
 				DB22CC8021401DAC00BE551A /* GVRGithubSearchRepositoriesResponse.m */,
+				DB22CC8221402E0300BE551A /* GVRGithubSearchRepositoriesResponseItem.h */,
+				DB22CC8321402E0300BE551A /* GVRGithubSearchRepositoriesResponseItem.m */,
+				DB22CC8521402EB700BE551A /* GVRGithubSearchRepositoriesResponseItemOwner.h */,
+				DB22CC8621402EB700BE551A /* GVRGithubSearchRepositoriesResponseItemOwner.m */,
 			);
 			path = GithubAPIRequests;
 			sourceTree = "<group>";
@@ -191,6 +213,9 @@
 				DBF8033B213ED1AD004A75D2 /* AppDelegate.m */,
 				DBF8033D213ED1AD004A75D2 /* ViewController.h */,
 				DBF8033E213ED1AD004A75D2 /* ViewController.m */,
+				DB22CC8821402F5400BE551A /* NSObject+GVRParseJSON.h */,
+				DB22CC8921402F5400BE551A /* NSObject+GVRParseJSON.m */,
+				DB22CC8B21402F5C00BE551A /* PrefixHeader.pch */,
 				DB22CC7E21401D8A00BE551A /* GithubAPIRequests */,
 				DB22CC6C213ED7AF00BE551A /* Networking */,
 				DBF80340213ED1AD004A75D2 /* Main.storyboard */,
@@ -427,8 +452,11 @@
 				DB22CC772140160800BE551A /* GVRHTTPRequest.m in Sources */,
 				DBF8034A213ED1AF004A75D2 /* main.m in Sources */,
 				DBF8033C213ED1AD004A75D2 /* AppDelegate.m in Sources */,
+				DB22CC8721402EB700BE551A /* GVRGithubSearchRepositoriesResponseItemOwner.m in Sources */,
+				DB22CC8421402E0300BE551A /* GVRGithubSearchRepositoriesResponseItem.m in Sources */,
 				DB22CC7D21401CDB00BE551A /* GVRGithubSearchRepositoriesRequest.m in Sources */,
 				DB22CC8121401DAC00BE551A /* GVRGithubSearchRepositoriesResponse.m in Sources */,
+				DB22CC8A21402F5400BE551A /* NSObject+GVRParseJSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +465,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB22CC6B213ED79300BE551A /* GithubAPIStarringSpec.m in Sources */,
+				DB22CC8D21402FFA00BE551A /* GithubAPISearchingSpec.m in Sources */,
+				DB22CC90214030CB00BE551A /* KiwiAsync.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +630,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YAL85W8CJA;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GithubViewer/PrefixHeader.pch";
 				INFOPLIST_FILE = GithubViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -618,6 +649,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YAL85W8CJA;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/GithubViewer/PrefixHeader.pch";
 				INFOPLIST_FILE = GithubViewer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

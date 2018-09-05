@@ -7,13 +7,21 @@
 //
 
 #import "GVRGithubSearchRepositoriesResponse.h"
+#import "GVRGithubSearchRepositoriesResponseItem.h"
 
 @implementation GVRGithubSearchRepositoriesResponse
 
 - (void)parseJSON:(NSDictionary *)dict {
     self.total_count = dict[@"total_count"];
-    self.incomplete_results = [dict[@"incomplete_results"]booleanValue];
-    self.items = dict[@"items"];
+    self.incomplete_results = [dict[@"incomplete_results"] boolValue];
+    NSArray *arrItems = dict[@"items"];
+    NSMutableArray *marrItems = [NSMutableArray arrayWithCapacity:arrItems.count];
+    [arrItems enumerateObjectsUsingBlock:^(NSDictionary *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        GVRGithubSearchRepositoriesResponseItem *item = [[GVRGithubSearchRepositoriesResponseItem alloc] init];
+        [item parseJSON:obj];
+        [marrItems addObject:item];
+    }];
+    self.items = [marrItems copy];
 }
 
 @end

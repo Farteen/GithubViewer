@@ -32,6 +32,10 @@
     }
 }
 
+- (NSURL *)baseURL {
+    return nil;
+}
+
 - (AFHTTPSessionManager *)manager {
     AFHTTPSessionManager *manager = [[GVRHTTPSessionManager sharedSessionManager] sessionManager:[self baseURL]];
     return manager;

@@ -18,6 +18,7 @@ describe(@"GithubAPISearching", ^{
     __block GVRGithubSearchRepositoriesRequest *searchReq = nil;
     beforeAll(^{
         searchReq = [[GVRGithubSearchRepositoriesRequest alloc] init];
+        searchReq.q = @"AFNetworking";
     });
     
     beforeEach(^{

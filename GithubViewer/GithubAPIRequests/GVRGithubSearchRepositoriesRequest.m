@@ -18,4 +18,12 @@
     return GVRRequestMethodGET;
 }
 
+- (NSDictionary *)params {
+    NSMutableDictionary *mdict = [NSMutableDictionary dictionaryWithCapacity:10];
+    mdict[@"q"] = self.q;
+    mdict[@"sort"] = self.sort;
+    mdict[@"order"] = self.order;
+    return [mdict copy];
+}
+
 @end

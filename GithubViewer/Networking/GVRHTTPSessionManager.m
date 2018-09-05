@@ -28,11 +28,11 @@ static GVRHTTPSessionManager *__sharedManager = nil;
 }
 
 - (AFHTTPSessionManager *)sessionManager:(NSURL *)baseURL {
-    NSString *base = baseURL.host;
-    if (base.length == 0) {
-        base = @"https://api.github.com/";
+    NSString *URLHost = baseURL.host;
+    if (URLHost.length == 0) {
+        URLHost = @"https://api.github.com/";
     }
-    AFHTTPSessionManager *manager = self.sessionManagerMap[base];
+    AFHTTPSessionManager *manager = self.sessionManagerMap[URLHost];
     if (!manager) {
         manager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL];
         AFJSONRequestSerializer *req = [AFJSONRequestSerializer serializer];
@@ -41,6 +41,12 @@ static GVRHTTPSessionManager *__sharedManager = nil;
         AFJSONResponseSerializer *res = [AFJSONResponseSerializer serializer];
         manager.requestSerializer = req;
         manager.responseSerializer = res;
+        if (!self.sessionManagerMap) {
+            self.sessionManagerMap = [NSDictionary dictionary];
+        }
+        NSMutableDictionary *mdict = [self.sessionManagerMap mutableCopy];
+        mdict[URLHost] = manager;
+        self.sessionManagerMap = [mdict copy];
     }
     return manager;
 }

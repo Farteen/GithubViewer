@@ -10,4 +10,8 @@
 
 @interface GVRGithubSearchRepositoriesResponse : GVRHTTPResponse
 
+@property (nonatomic, strong) NSNumber *total_count;
+@property (nonatomic, assign) BOOL incomplete_results;
+@property (nonatomic, strong) NSArray *items;
+
 @end

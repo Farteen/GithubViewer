@@ -10,4 +10,10 @@
 
 @implementation GVRGithubSearchRepositoriesResponse
 
+- (void)parseJSON:(NSDictionary *)dict {
+    self.total_count = dict[@"total_count"];
+    self.incomplete_results = [dict[@"incomplete_results"]booleanValue];
+    self.items = dict[@"items"];
+}
+
 @end

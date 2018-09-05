@@ -13,6 +13,8 @@
 		DB22CC6F213ED7DC00BE551A /* GVRHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC6E213ED7DC00BE551A /* GVRHTTPSessionManager.m */; };
 		DB22CC772140160800BE551A /* GVRHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC762140160800BE551A /* GVRHTTPRequest.m */; };
 		DB22CC7A21401A4E00BE551A /* GVRHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC7921401A4E00BE551A /* GVRHTTPResponse.m */; };
+		DB22CC7D21401CDB00BE551A /* GVRGithubSearchRepositoriesRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC7C21401CDB00BE551A /* GVRGithubSearchRepositoriesRequest.m */; };
+		DB22CC8121401DAC00BE551A /* GVRGithubSearchRepositoriesResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = DB22CC8021401DAC00BE551A /* GVRGithubSearchRepositoriesResponse.m */; };
 		DBF8033C213ED1AD004A75D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF8033B213ED1AD004A75D2 /* AppDelegate.m */; };
 		DBF8033F213ED1AD004A75D2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF8033E213ED1AD004A75D2 /* ViewController.m */; };
 		DBF80342213ED1AD004A75D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF80340213ED1AD004A75D2 /* Main.storyboard */; };
@@ -55,6 +57,10 @@
 		DB22CC762140160800BE551A /* GVRHTTPRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVRHTTPRequest.m; sourceTree = "<group>"; };
 		DB22CC7821401A4E00BE551A /* GVRHTTPResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVRHTTPResponse.h; sourceTree = "<group>"; };
 		DB22CC7921401A4E00BE551A /* GVRHTTPResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVRHTTPResponse.m; sourceTree = "<group>"; };
+		DB22CC7B21401CDB00BE551A /* GVRGithubSearchRepositoriesRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVRGithubSearchRepositoriesRequest.h; sourceTree = "<group>"; };
+		DB22CC7C21401CDB00BE551A /* GVRGithubSearchRepositoriesRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVRGithubSearchRepositoriesRequest.m; sourceTree = "<group>"; };
+		DB22CC7F21401DAC00BE551A /* GVRGithubSearchRepositoriesResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GVRGithubSearchRepositoriesResponse.h; sourceTree = "<group>"; };
+		DB22CC8021401DAC00BE551A /* GVRGithubSearchRepositoriesResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GVRGithubSearchRepositoriesResponse.m; sourceTree = "<group>"; };
 		DBF80337213ED1AD004A75D2 /* GithubViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF8033A213ED1AD004A75D2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBF8033B213ED1AD004A75D2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -145,6 +151,17 @@
 			path = TestingUtil;
 			sourceTree = "<group>";
 		};
+		DB22CC7E21401D8A00BE551A /* GithubAPIRequests */ = {
+			isa = PBXGroup;
+			children = (
+				DB22CC7B21401CDB00BE551A /* GVRGithubSearchRepositoriesRequest.h */,
+				DB22CC7C21401CDB00BE551A /* GVRGithubSearchRepositoriesRequest.m */,
+				DB22CC7F21401DAC00BE551A /* GVRGithubSearchRepositoriesResponse.h */,
+				DB22CC8021401DAC00BE551A /* GVRGithubSearchRepositoriesResponse.m */,
+			);
+			path = GithubAPIRequests;
+			sourceTree = "<group>";
+		};
 		DBF8032E213ED1AD004A75D2 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +191,7 @@
 				DBF8033B213ED1AD004A75D2 /* AppDelegate.m */,
 				DBF8033D213ED1AD004A75D2 /* ViewController.h */,
 				DBF8033E213ED1AD004A75D2 /* ViewController.m */,
+				DB22CC7E21401D8A00BE551A /* GithubAPIRequests */,
 				DB22CC6C213ED7AF00BE551A /* Networking */,
 				DBF80340213ED1AD004A75D2 /* Main.storyboard */,
 				DBF80343213ED1AF004A75D2 /* Assets.xcassets */,
@@ -409,6 +427,8 @@
 				DB22CC772140160800BE551A /* GVRHTTPRequest.m in Sources */,
 				DBF8034A213ED1AF004A75D2 /* main.m in Sources */,
 				DBF8033C213ED1AD004A75D2 /* AppDelegate.m in Sources */,
+				DB22CC7D21401CDB00BE551A /* GVRGithubSearchRepositoriesRequest.m in Sources */,
+				DB22CC8121401DAC00BE551A /* GVRGithubSearchRepositoriesResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

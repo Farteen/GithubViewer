@@ -12,8 +12,14 @@
 
 @implementation GVRHTTPRequest
 
+- (instancetype)init {
+    if (self = [super init]) {
+        self.params = [NSMutableDictionary dictionaryWithCapacity:10];
+    }
+    return self;
+}
+
 - (void)startRequest {
-    
     switch ([self requestMethod]) {
         case GVRRequestMethodGET:
             [self startGET];
@@ -60,7 +66,7 @@
 
 - (void)handleFinished:(NSURLSessionTask *)task response:(NSDictionary *)responseObject {
     if (self.didFinished) {
-        GVRHTTPResponse *response = [[GVRHTTPResponse alloc] init];
+        GVRHTTPResponse *response = [[[self bindingRepsonseClass] alloc] init];
         [response parseHTTPResponseDictionary:responseObject];
         self.didFinished(task, response);
     }
@@ -70,6 +76,15 @@
     if (self.didFailed) {
         self.didFailed(task, error);
     }
+}
+
+- (Class)bindingRepsonseClass {
+    NSString *requestClass = NSStringFromClass([self class]);
+    NSString *responseClass = [requestClass stringByReplacingOccurrencesOfString:@"Request" withString:@"Response"];
+    if (NSClassFromString(responseClass)) {
+        return NSClassFromString(responseClass);
+    }
+    return [GVRHTTPResponse class];
 }
 
 

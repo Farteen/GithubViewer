@@ -7,7 +7,6 @@
 //
 
 #import <Kiwi/Kiwi.h>
-#import "GVRHTTPSessionManager.h"
 
 SPEC_BEGIN(GithubAPIStarringSpec)
 //6e4cd6bcfb2f840f61259edf015ebc612688c950

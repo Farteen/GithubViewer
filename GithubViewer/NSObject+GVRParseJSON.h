@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (GVRParseJSON)
-- (void)parseJSON:(NSDictionary *)dict;
+- (void)parseHTTPResponseDictionary:(NSDictionary *)dict;
 @end

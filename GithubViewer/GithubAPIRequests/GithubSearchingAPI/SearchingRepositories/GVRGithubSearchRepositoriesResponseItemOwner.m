@@ -10,7 +10,7 @@
 
 @implementation GVRGithubSearchRepositoriesResponseItemOwner
 
-- (void)parseJSON:(NSDictionary *)dict {
+- (void)parseHTTPResponseDictionary:(NSDictionary *)dict {
     self.login = dict[@"login"];
     self.ownerId = dict[@"id"];
     self.node_id = dict[@"node_id"];

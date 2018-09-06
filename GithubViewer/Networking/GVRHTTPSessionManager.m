@@ -28,10 +28,10 @@ static GVRHTTPSessionManager *__sharedManager = nil;
 }
 
 - (AFHTTPSessionManager *)sessionManager:(NSURL *)baseURL {
-    NSString *URLHost = baseURL.host;
-    if (URLHost.length == 0) {
-        URLHost = @"https://api.github.com/";
+    if (baseURL == nil) {
+        baseURL = [NSURL URLWithString:@"https://api.github.com/"];
     }
+    NSString *URLHost = baseURL.host;
     AFHTTPSessionManager *manager = self.sessionManagerMap[URLHost];
     if (!manager) {
         manager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL];

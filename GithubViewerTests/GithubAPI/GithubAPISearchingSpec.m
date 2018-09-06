@@ -26,7 +26,6 @@ describe(@"GithubAPISearching", ^{
     });
     
     it(@"check search req", ^{
-        
         [searchReq setDidFinished:^(NSURLSessionTask *task, __kindof GVRGithubSearchRepositoriesResponse *response) {
             
         }];

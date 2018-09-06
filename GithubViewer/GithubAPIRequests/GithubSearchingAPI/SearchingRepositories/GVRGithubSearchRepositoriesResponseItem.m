@@ -10,7 +10,7 @@
 #import "GVRGithubSearchRepositoriesResponseItemOwner.h"
 @implementation GVRGithubSearchRepositoriesResponseItem
 
-- (void)parseJSON:(NSDictionary *)dict {
+- (void)parseHTTPResponseDictionary:(NSDictionary *)dict {
     self.itemId = dict[@"id"];
     self.node_id = dict[@"node_id"];
     self.name = dict[@"name"];
@@ -18,7 +18,7 @@
     
     NSDictionary *dictOwner = dict[@"owner"];
     self.owner = [[GVRGithubSearchRepositoriesResponseItemOwner alloc] init];
-    [self.owner parseJSON:dictOwner];
+    [self.owner parseHTTPResponseDictionary:dictOwner];
     
     self.isPrivate = [dict[@"private"] boolValue];
     self.html_url = dict[@"html_url"];

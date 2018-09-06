@@ -11,14 +11,14 @@
 
 @implementation GVRGithubSearchRepositoriesResponse
 
-- (void)parseJSON:(NSDictionary *)dict {
+- (void)parseHTTPResponseDictionary:(NSDictionary *)dict {
     self.total_count = dict[@"total_count"];
     self.incomplete_results = [dict[@"incomplete_results"] boolValue];
     NSArray *arrItems = dict[@"items"];
     NSMutableArray *marrItems = [NSMutableArray arrayWithCapacity:arrItems.count];
     [arrItems enumerateObjectsUsingBlock:^(NSDictionary *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         GVRGithubSearchRepositoriesResponseItem *item = [[GVRGithubSearchRepositoriesResponseItem alloc] init];
-        [item parseJSON:obj];
+        [item parseHTTPResponseDictionary:obj];
         [marrItems addObject:item];
     }];
     self.items = [marrItems copy];

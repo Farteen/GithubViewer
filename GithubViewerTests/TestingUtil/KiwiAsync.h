@@ -9,10 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <Kiwi.h>
 
-static inline id KiwiAsyncFutureValue(id futureValue, NSTimeInterval timeout) {
-    return [expectFutureValue(futureValue) shouldEventuallyBeforeTimingOutAfter(timeout)];
-}
+#define KiwiAsyncFutureValue(futureValue, timeout) \
+     [expectFutureValue(futureValue) shouldEventuallyBeforeTimingOutAfter(timeout)]
 
-static inline id KiwiAsync(id futurevalue) {
-    return KiwiAsyncFutureValue(futurevalue, 10);
-}
+#define KiwiAsync(futurevalue) \
+ KiwiAsyncFutureValue(futurevalue, 10)

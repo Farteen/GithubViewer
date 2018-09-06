@@ -25,6 +25,16 @@ Const_squareBracketLeft = "["
 Const_squareBracketRight = "]"
 Const_booleanValue = " boolValue"
 
+Const_importFoundation = "#import <Foundation/Foundation.h>"
+Const_interface = "@interface "
+Const_semicolon = " : NSObject"
+Const_end = "@end"
+
+json_file_path = ARGV[0]
+json_root_class_name = ARGV[1]
+class_property_name_map = {}
+class_name_code_map = {}
+
 def parse(hash, propertiesDeclaration, parseJSONMethods)
     hash.each do |key, value|
         # puts key, value
@@ -32,7 +42,16 @@ def parse(hash, propertiesDeclaration, parseJSONMethods)
             # parse(value)
             propertiesDeclaration << Const_property + Const_strong + Const_dictionary + key + Const_comma
             parseJSONMethods << Const_tab + Const_selfDot + key + Const_equal + Const_dictLeft + key + Const_dictRight + Const_comma
-            
+            hash_key_join = value.keys.sort.join
+            if class_map[hash_key_join] == nil
+                class_name = json_root_class_name + key.capitalize
+                class_map[hash_key_join] = class_name
+                class_code_declaration = []
+                class_code_declaration << Const_importFoundation
+                class_code_declaration << Const_interface + class_name + Const_semicolon
+                # change to class to solve problem
+                class_name_code_map[class_name] = class_code_declaration
+            end
         elsif value.is_a?(Array)
             propertiesDeclaration << Const_property + Const_strong + Const_array + key + Const_comma
             parseJSONMethods << Const_tab + Const_selfDot + key + Const_equal + Const_dictLeft + key + Const_dictRight + Const_comma
@@ -51,7 +70,6 @@ def parse(hash, propertiesDeclaration, parseJSONMethods)
     end
 end
 
-json_file_path = ARGV[0]
 json_string = File.readlines(json_file_path).join
 json_object = JSON.parse(json_string)
 json_to_properties_result = []

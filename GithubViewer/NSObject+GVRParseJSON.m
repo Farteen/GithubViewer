@@ -9,7 +9,7 @@
 #import "NSObject+GVRParseJSON.h"
 
 @implementation NSObject (GVRParseJSON)
-- (void)parseJSON:(NSDictionary *)dict {
+- (void)parseHTTPResponseDictionary:(NSDictionary *)dict {
     
 }
 @end
